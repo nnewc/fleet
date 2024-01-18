@@ -10,10 +10,10 @@
 ### Fleet Local and Fleet Default
 ```bash
 ### Adds the GitRepo(s) to the local cluster.
-kubectl apply -f https://raw.githubusercontent.com/zackbradys/fleet/main/gitrepo-local.yaml
+kubectl apply -f https://raw.githubusercontent.com/nnewc/fleet/main/gitrepo-local.yaml
 
 ### Adds the GitRepo(s) to all downstream cluster(s).
-kubectl apply -f https://raw.githubusercontent.com/zackbradys/fleet/main/gitrepo-default.yaml
+kubectl apply -f https://raw.githubusercontent.com/nnewc/fleet/main/gitrepo-default.yaml
 ```
 
 ### Fleet Deployment Architecture Diagram

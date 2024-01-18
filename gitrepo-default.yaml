@@ -4,7 +4,7 @@ metadata:
   name: longhorn-crd
   namespace: fleet-default
 spec:
-  repo: https://github.com/zackbradys/fleet
+  repo: https://github.com/nnewc/fleet
   branch: main
   paths:
     - /fleet/longhorn-crd
@@ -20,7 +20,7 @@ metadata:
   name: longhorn
   namespace: fleet-default
 spec:
-  repo: https://github.com/zackbradys/fleet
+  repo: https://github.com/nnewc/fleet
   branch: main
   paths:
     - /fleet/longhorn
@@ -36,7 +36,7 @@ metadata:
   name: longhorn-configs
   namespace: fleet-default
 spec:
-  repo: https://github.com/zackbradys/fleet
+  repo: https://github.com/nnewc/fleet
   branch: main
   paths:
     - /fleet/longhorn-configs
@@ -52,7 +52,7 @@ metadata:
   name: neuvector-crd
   namespace: fleet-default
 spec:
-  repo: https://github.com/zackbradys/fleet
+  repo: https://github.com/nnewc/fleet
   branch: main
   paths:
     - /fleet/neuvector-crd
@@ -68,7 +68,7 @@ metadata:
   name: neuvector
   namespace: fleet-default
 spec:
-  repo: https://github.com/zackbradys/fleet
+  repo: https://github.com/nnewc/fleet
   branch: main
   paths:
     - /fleet/neuvector
@@ -84,7 +84,7 @@ metadata:
   name: monitoring-crd
   namespace: fleet-default
 spec:
-  repo: https://github.com/zackbradys/fleet
+  repo: https://github.com/nnewc/fleet
   branch: main
   paths:
     - /fleet/rancher-monitoring-crd
@@ -100,7 +100,7 @@ metadata:
   name: monitoring
   namespace: fleet-default
 spec:
-  repo: https://github.com/zackbradys/fleet
+  repo: https://github.com/nnewc/fleet
   branch: main
   paths:
     - /fleet/rancher-monitoring
