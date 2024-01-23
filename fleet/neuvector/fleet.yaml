@@ -4,9 +4,54 @@ helm:
   releaseName: neuvector
   repo: https://charts.rancher.io
   chart: neuvector
-  version: 103.0.0+up2.6.4
+  version: 102.0.6+up2.6.6
   valuesFiles:
     - neuvector-values.yaml
 
 dependsOn:
   - name: neuvector-crd-fleet-neuvector-crd
+
+targetCustomizations:
+  - name: local
+    clusterName: local
+    helm:
+      values:
+        global:
+          cattle:
+            psp: 
+              enabled: true 
+        manager: 
+          ingress:
+            enabled: true
+            host: neuvector-manager.10.7.2.98.nip.io
+        controller:
+          ingress:
+            enabled: true
+            host: neuvector-controller.10.7.2.98.nip.io
+          federation:
+            mastersvc:
+              type: ClusterIP
+              ingress:
+                enabled: true
+                host: neuvector-fed-master.10.7.2.98.nip.io
+  - name: neuvector-federated
+    clusterName: neuvector-federated
+    helm:
+      values:
+        manager: 
+          ingress:
+            enabled: true
+            host: neuvector-manager.10.7.2.90.nip.io
+        controller:
+          apisvc:
+            type: ClusterIP
+          ingress:
+            enabled: true
+            host: neuvector-controller.10.7.2.90.nip.io
+          federation:
+            managedsvc:
+              type: ClusterIP
+              ingress:
+                enabled: true
+                host: neuvector-fed-managed.10.7.2.90.nip.io
+
