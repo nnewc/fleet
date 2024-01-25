@@ -4,6 +4,10 @@ controller:
   ranchersso:
     enabled: true
   runAsUser: 1000
+  resources:
+    requests:
+      cpu: "1000m"
+      memory: "1Gi"
 global:
   cattle:
     url: https://10.7.2.98.nip.io
@@ -14,11 +18,23 @@ manager:
   svc:
     type: ClusterIP
   runAsUser: 5400
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "500Mi"
 enforcer:
   runAsUser: 1000
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "500Mi"
 cve:
   scanner:
     runAsUser: 5400
+    resources:
+    requests:
+      cpu: "500m"
+      memory: "100Mi"
   updater:
     runAsUser: 1000
 rbac: true

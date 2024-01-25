@@ -1,0 +1,6 @@
+global:
+  selinux:
+    enabled: true
+  cattle:
+    psp:
+      enabled: true

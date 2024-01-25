@@ -109,3 +109,51 @@ spec:
     clusterSelector:
       matchLabels:
         monitoring: enabled
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: logging-crd
+  namespace: fleet-local
+spec:
+  repo: https://github.com/nnewc/fleet
+  branch: main
+  paths:
+    - /fleet/logging-crd
+  targets:
+  - name: logging-crd
+    clusterSelector:
+      matchLabels:
+        logging: enabled
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: logging
+  namespace: fleet-local
+spec:
+  repo: https://github.com/nnewc/fleet
+  branch: main
+  paths:
+    - /fleet/logging
+  targets:
+  - name: logging
+    clusterSelector:
+      matchLabels:
+        logging: enabled
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: harbor
+  namespace: fleet-local
+spec:
+  repo: https://github.com/nnewc/fleet
+  branch: main
+  paths:
+    - /fleet/harbor
+  targets:
+  - name: harbor
+    clusterSelector:
+      matchLabels:
+        harbor: enabled
