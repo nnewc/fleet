@@ -29,6 +29,13 @@ enforcer:
       cpu: "500m"
       memory: "500Mi"
 cve:
+  adapter:
+    enabled: true
+    runAsUser: 1000
+    svc:
+      type: NodePort
+    harbor:
+      secretName: adapter-credentials
   scanner:
     runAsUser: 5400
     resources:
