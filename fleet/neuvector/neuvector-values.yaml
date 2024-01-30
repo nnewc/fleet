@@ -1,4 +1,15 @@
 controller:
+ apisvc:
+    type: ClusterIP
+ configmap:
+  data:
+    sysinitcfg.yaml: |
+      Scanner_Autoscale:
+      Strategy: delayed
+      Min_Pods: 1
+      Max_Pods: 3
+    enabled: true
+  replicas: 1
   pvc:
     enabled: false
   ranchersso:
@@ -15,6 +26,7 @@ k3s:
   enabled: true
   runtimePath: /run/k3s/containerd/containerd.sock
 manager:
+  enabled: false
   svc:
     type: ClusterIP
   runAsUser: 5400
@@ -23,6 +35,7 @@ manager:
       cpu: "500m"
       memory: "500Mi"
 enforcer:
+  enabled: false
   runAsUser: 1000
   resources:
     requests:
@@ -31,11 +44,21 @@ enforcer:
 cve:
   adapter:
     enabled: true
+    ingress:
+      enabled: false
+      annotations:
+        cert-manager.io/issuer: selfsigned-cluster-issuer
+      host: neuvector-adapter.10.7.2.98.nip.io
+      path: "/"
+      secretName: adapter-ingress
+      tls: true
     runAsUser: 1000
     svc:
-      type: NodePort
+      type: ClusterIP
     harbor:
       secretName: adapter-credentials
+    certificate:
+      secret: adapter-tls-cert
   scanner:
     runAsUser: 5400
     resources:
@@ -46,3 +69,4 @@ cve:
     runAsUser: 1000
 rbac: true
 leastPrivilege: true
+
