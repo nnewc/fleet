@@ -69,4 +69,3 @@ cve:
     runAsUser: 1000
 rbac: true
 leastPrivilege: true
-

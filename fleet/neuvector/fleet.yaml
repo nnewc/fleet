@@ -3,8 +3,8 @@ defaultNamespace: cattle-neuvector-system
 helm:
   releaseName: neuvector
   repo: https://neuvector.github.io/neuvector-helm/
-  chart: neuvector
-  version: "2.7.0"
+  chart: core
+  version: "2.7.1"
   valuesFiles:
     - neuvector-values.yaml
 
@@ -19,7 +19,8 @@ targetCustomizations:
         global:
           cattle:
             psp: 
-              enabled: true 
+              enabled: true
+        psp: true
         manager: 
           ingress:
             enabled: true
