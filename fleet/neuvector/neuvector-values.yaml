@@ -26,7 +26,7 @@ k3s:
   enabled: true
   runtimePath: /run/k3s/containerd/containerd.sock
 manager:
-  enabled: false
+  enabled: true
   svc:
     type: ClusterIP
   runAsUser: 5400
@@ -56,9 +56,10 @@ cve:
     svc:
       type: ClusterIP
     harbor:
-      secretName: adapter-credentials
+      secretName: harbor-credentials
     certificate:
       secret: adapter-tls-cert
+      pemFile: tls.crt
   scanner:
     runAsUser: 5400
     resources:

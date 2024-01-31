@@ -1,5 +1,0 @@
-defaultNamespace: cattle-neuvector-system
-
-dependsOn:
-  - name: neuvector-crd-fleet-neuvector-crd
-

@@ -6,7 +6,7 @@ To allow Harbor to communciate with Neuvector registry adapter, a TLS certificat
 apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
-  name: adapter-ca
+  name: adapter-tls-cert
   namespace: cattle-neuvector-system
 spec:
   selfSigned: {}
@@ -22,10 +22,11 @@ spec:
     organizations:
       - NeuVector
   isCA: true
-  commonName: neuvector-service-registry-adapter
+  commonName: neuvector
   dnsNames:
   - neuvector-service-registry-adapter.cattle-neuvector-system.svc.cluster.local
   - neuvector-service-registry-adapter
+  - neuvector
   secretName: adapter-tls-cert
   usages:
   - digital signature
@@ -33,7 +34,7 @@ spec:
   issuerRef:
     group: cert-manager.io
     kind: Issuer
-    name: adapter-ca
+    name: adapter-tls-cert
 ```
 
 You must also create a secret containing the username/password credentials harbor will use to authenticate with registry adapter:

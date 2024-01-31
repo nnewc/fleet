@@ -72,7 +72,6 @@ spec:
   branch: main
   paths:
     - /fleet/neuvector
-    - /fleet/neuvector/adapter
   targets:
   - name: neuvector
     clusterSelector:
