@@ -157,3 +157,35 @@ spec:
     clusterSelector:
       matchLabels:
         harbor: enabled
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: rancher-backup
+  namespace: fleet-local
+spec:
+  repo: https://github.com/nnewc/fleet
+  branch: main
+  paths:
+    - /fleet/rancher-backup
+  targets:
+  - name: rancher-backup
+    clusterSelector:
+      matchLabels:
+        backups: enabled
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: rancher-backup-crd
+  namespace: fleet-local
+spec:
+  repo: https://github.com/nnewc/fleet
+  branch: main
+  paths:
+    - /fleet/rancher-backup-crd
+  targets:
+  - name: rancher-backup-crd
+    clusterSelector:
+      matchLabels:
+        backups: enabled

@@ -1,0 +1,7 @@
+s3:
+  bucketName: nnewc-backups
+  credentialSecretName: aws-creds
+  credentialSecretNamespace: cattle-resources-system
+  enabled: true
+  endpoint: s3.us-gov-west-1.amazonaws.com
+  region: us-gov-west-1
