@@ -1,0 +1,9 @@
+defaultNamespace: keycloak
+
+helm:
+  releaseName: keycloak
+  repo: oci://registry-1.docker.io/bitnamicharts/keycloak
+  chart: keycloak
+  version: "18.4.0"
+  valuesFiles:
+    - keycloak-values.yaml

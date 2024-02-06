@@ -189,3 +189,19 @@ spec:
     clusterSelector:
       matchLabels:
         backups: enabled
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: keycloak
+  namespace: fleet-local
+spec:
+  repo: https://github.com/nnewc/fleet
+  branch: main
+  paths:
+    - /fleet/keycloak
+  targets:
+  - name: keycloak
+    clusterSelector:
+      matchLabels:
+        keycloak: enabled

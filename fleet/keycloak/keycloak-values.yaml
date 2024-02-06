@@ -1,0 +1,6 @@
+ingress:
+  enabled: true
+  hostname: keycloak.10.7.2.98.nip.io
+  annotations: 
+  - cert-manager.io/issuer: selfsigned-cluster-issuer
+  tls: true
