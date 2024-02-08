@@ -1,13 +1,13 @@
 controller:
- apisvc:
+  apisvc:
     type: ClusterIP
- configmap:
-  data:
-    sysinitcfg.yaml: |
-      Scanner_Autoscale:
-      Strategy: delayed
-      Min_Pods: 1
-      Max_Pods: 3
+  configmap:
+    data:
+      sysinitcfg.yaml: |
+        Scanner_Autoscale:
+        Strategy: delayed
+        Min_Pods: 1
+        Max_Pods: 3
     enabled: true
   replicas: 1
   disruptionBudget: 2
