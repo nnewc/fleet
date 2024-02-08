@@ -10,8 +10,10 @@ controller:
       Max_Pods: 3
     enabled: true
   replicas: 1
+  disruptionBudget: 2
   pvc:
-    enabled: false
+    enabled: true
+    storageClass: longhorn
   ranchersso:
     enabled: true
   runAsUser: 1000
