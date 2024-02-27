@@ -23,7 +23,7 @@ controller:
       memory: "1Gi"
 global:
   cattle:
-    url: https://10.7.2.98.nip.io
+    url: https://10.7.2.230.nip.io
 k3s:
   enabled: true
   runtimePath: /run/k3s/containerd/containerd.sock
@@ -50,7 +50,7 @@ cve:
       enabled: false
       annotations:
         cert-manager.io/issuer: selfsigned-cluster-issuer
-      host: neuvector-adapter.10.7.2.98.nip.io
+      host: neuvector-adapter.10.7.2.230.nip.io
       path: "/"
       secretName: adapter-ingress
       tls: true

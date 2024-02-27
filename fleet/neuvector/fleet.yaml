@@ -16,25 +16,20 @@ targetCustomizations:
     clusterName: local
     helm:
       values:
-        global:
-          cattle:
-            psp: 
-              enabled: true
-        psp: true
         manager: 
           ingress:
             enabled: true
-            host: neuvector-manager.10.7.2.98.nip.io
+            host: neuvector-manager.10.7.2.230.nip.io
         controller:
           ingress:
             enabled: true
-            host: neuvector-controller.10.7.2.98.nip.io
+            host: neuvector-controller.10.7.2.230.nip.io
           federation:
             mastersvc:
               type: ClusterIP
               ingress:
                 enabled: true
-                host: neuvector-fed-master.10.7.2.98.nip.io
+                host: neuvector-fed-master.10.7.2.230.nip.io
   - name: neuvector-federated
     clusterName: neuvector-federated
     helm:

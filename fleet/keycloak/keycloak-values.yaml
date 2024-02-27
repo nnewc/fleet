@@ -1,7 +1,7 @@
 ingress:
   enabled: true
   rules:
-  - host: keycloak.10.7.2.98.nip.io
+  - host: keycloak.10.7.2.230.nip.io
     paths:
     - path: /
       pathType: Prefix
@@ -9,13 +9,13 @@ ingress:
     cert-manager.io/issuer: selfsigned-cluster-issuer
   tls:
   - hosts:
-    - keycloak.10.7.2.98.nip.io
+    - keycloak.10.7.2.230.nip.io
     secretName: keycloak-ingress
     annotations: 
       cert-manager.io/issuer: selfsigned-cluster-issuer
     tls:
     - hosts:
-      - keycloak.10.7.2.98.nip.io
+      - keycloak.10.7.2.230.nip.io
       secretName: keycloak-ingress-console
 postgresql:
   enabled: true

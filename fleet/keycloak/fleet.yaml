@@ -1,9 +1,9 @@
 defaultNamespace: keycloak
 
 helm:
-  releaseName: keycloak
+  releaseName: keycloakx
   repo: https://codecentric.github.io/helm-charts
-  chart: keycloak
+  chart: keycloakx
   version: "18.4.4"
   valuesFiles:
     - keycloak-values.yaml

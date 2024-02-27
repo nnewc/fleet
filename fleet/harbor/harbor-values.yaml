@@ -3,5 +3,5 @@ persistence:
 expose:
   ingress:
     hosts: 
-      core: harbor.10.7.2.98.nip.io
-externalURL: https://harbor.10.7.2.98.nip.io      
+      core: harbor.10.7.2.230.nip.io
+externalURL: https://harbor.10.7.2.230.nip.io      
