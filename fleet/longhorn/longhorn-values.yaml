@@ -1,0 +1,9 @@
+ingress:
+  enabled: true
+  host: longhorn.10.7.2.230.nip.io
+  tls:
+    enabled: true
+    secretName: longhor-tls-ingress
+defaultSettings:
+  defaultDataLocality: best-effort
+  replicaAutoBalance: best-effort
