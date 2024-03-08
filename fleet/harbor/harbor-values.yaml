@@ -4,4 +4,6 @@ expose:
   ingress:
     hosts: 
       core: harbor.10.7.2.230.nip.io
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-buffering: "off"
 externalURL: https://harbor.10.7.2.230.nip.io      
