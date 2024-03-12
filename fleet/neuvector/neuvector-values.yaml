@@ -36,6 +36,7 @@ manager:
     requests:
       cpu: "500m"
       memory: "500Mi"
+  
 enforcer:
   enabled: false
   runAsUser: 1000

@@ -1,7 +1,19 @@
 persistence:
-  enabled: false
+  enabled: true
 expose:
+  type: ingress
   ingress:
+    annotations:
+      ingress.kubernetes.io/proxy-body-size: '0'
+      ingress.kubernetes.io/ssl-redirect: 'true'
+      nginx.ingress.kubernetes.io/proxy-body-size: '0'
+      nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+      cert-manager.io/issuer: selfsigned-issuer
     hosts: 
       core: harbor.10.7.2.230.nip.io
+  tls:
+    certSource: secret
+    enabled: true
+    secret:
+      secretName: tls-ingress-harbor
 externalURL: https://harbor.10.7.2.230.nip.io      

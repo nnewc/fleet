@@ -9,7 +9,7 @@ helm:
     - neuvector-values.yaml
 
 dependsOn:
-  - name: neuvector-crd-fleet-neuvector-crd
+  - name: neuvector-fleet-neuvector-crd 
 
 targetCustomizations:
   - name: local
