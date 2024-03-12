@@ -39,7 +39,7 @@ manager:
   ingress:
     enabled: true
     annotations:
-        cert-manager.io/issuer: selfsigned-cluster-issuer
+        cert-manager.io/issuer: selfsigned-issuer
         nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     host: https://neuvector-manager.10.7.2.230.nip.io
     secretName: manager-ingress
@@ -57,7 +57,7 @@ cve:
     ingress:
       enabled: false
       annotations:
-        cert-manager.io/issuer: selfsigned-cluster-issuer
+        cert-manager.io/issuer: selfsigned-issuer
       host: neuvector-adapter.10.7.2.230.nip.io
       path: "/"
       secretName: adapter-ingress

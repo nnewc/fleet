@@ -28,4 +28,4 @@ diff:
         - /spec/endpoints
 
 dependsOn:
-  - name: monitoring-crd-fleet-rancher-monitoring-crd
+  - name: rancher-monitoring-fleet-rancher-monitoring-crd

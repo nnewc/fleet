@@ -9,4 +9,4 @@ helm:
     - logging-values.yaml
 
 dependsOn:
-  - name: logging-crd-fleet-logging-crd
+  - name: logging-fleet-logging-crd

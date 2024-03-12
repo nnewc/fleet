@@ -9,16 +9,12 @@ helm:
     - rancher-backup-values.yaml
 
   dependsOn:
-  - name: rancher-backup-crd-fleet-rancher-backup-crd
+  - name: rancher-backup-fleet-rancher-backup-crd
 
   targetCustomizations:
   - name: local
     clusterName: local
     helm:
       values:
-        global:
-          cattle:
-            psp: 
-              enabled: true
         s3:
           folder: vsphere/clusters/local

@@ -67,22 +67,6 @@ spec:
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
-  name: monitoring-crd
-  namespace: fleet-local
-spec:
-  repo: https://github.com/nnewc/fleet
-  branch: main
-  paths:
-    - /fleet/rancher-monitoring-crd
-  targets:
-  - name: monitoring
-    clusterSelector:
-      matchLabels:
-        monitoring: enabled
----
-apiVersion: fleet.cattle.io/v1alpha1
-kind: GitRepo
-metadata:
   name: monitoring
   namespace: fleet-local
 spec:
@@ -90,27 +74,12 @@ spec:
   branch: main
   paths:
     - /fleet/rancher-monitoring
+    - /fleet/rancher-monitoring/crd
   targets:
   - name: monitoring
     clusterSelector:
       matchLabels:
         monitoring: enabled
----
-apiVersion: fleet.cattle.io/v1alpha1
-kind: GitRepo
-metadata:
-  name: logging-crd
-  namespace: fleet-local
-spec:
-  repo: https://github.com/nnewc/fleet
-  branch: main
-  paths:
-    - /fleet/logging-crd
-  targets:
-  - name: logging-crd
-    clusterSelector:
-      matchLabels:
-        logging: enabled
 ---
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
@@ -122,6 +91,7 @@ spec:
   branch: main
   paths:
     - /fleet/logging
+    - /fleet/logging/crd
   targets:
   - name: logging
     clusterSelector:
@@ -154,24 +124,9 @@ spec:
   branch: main
   paths:
     - /fleet/rancher-backup
+    - /fleet/rancher-backup/crd
   targets:
   - name: rancher-backup
-    clusterSelector:
-      matchLabels:
-        backups: enabled
----
-apiVersion: fleet.cattle.io/v1alpha1
-kind: GitRepo
-metadata:
-  name: rancher-backup-crd
-  namespace: fleet-local
-spec:
-  repo: https://github.com/nnewc/fleet
-  branch: main
-  paths:
-    - /fleet/rancher-backup-crd
-  targets:
-  - name: rancher-backup-crd
     clusterSelector:
       matchLabels:
         backups: enabled

@@ -12,7 +12,7 @@ metadata:
   name: adapter-tls-cert
   namespace: cattle-neuvector-system
 spec:
-  duration: 17520h # 2 years
+  duration: 17520h0m0s # 2 years
   subject:
     organizations:
       - NeuVector
