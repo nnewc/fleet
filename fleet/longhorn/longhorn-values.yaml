@@ -7,3 +7,4 @@ ingress:
 defaultSettings:
   defaultDataLocality: best-effort
   replicaAutoBalance: best-effort
+  storageOverProvisioningPercentage: 200
