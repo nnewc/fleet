@@ -23,7 +23,7 @@ controller:
       memory: "1Gi"
 global:
   cattle:
-    url: https://10.7.2.230.nip.io
+    url: https://rancher.10.7.2.230.nip.io
 k3s:
   enabled: true
   runtimePath: /run/k3s/containerd/containerd.sock
@@ -36,7 +36,14 @@ manager:
     requests:
       cpu: "500m"
       memory: "500Mi"
-  
+  ingress:
+    enabled: true
+    annotations:
+        cert-manager.io/issuer: selfsigned-cluster-issuer
+        nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    host: https://neuvector-manager.10.7.2.230.nip.io
+    secretName: manager-ingress
+    tls: true
 enforcer:
   enabled: false
   runAsUser: 1000
