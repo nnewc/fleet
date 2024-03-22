@@ -9,4 +9,4 @@ helm:
     - longhorn-values.yaml
 
 dependsOn:
-  - name: longhorn-crd-fleet-longhorn-crd
+  - name: longhorn-fleet-longhorn-crd
