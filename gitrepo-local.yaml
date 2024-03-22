@@ -1,18 +1,3 @@
-apiVersion: fleet.cattle.io/v1alpha1
-kind: GitRepo
-metadata:
-  name: longhorn-crd
-  namespace: fleet-local
-spec:
-  repo: https://github.com/nnewc/fleet
-  branch: main
-  paths:
-    - /fleet/longhorn-crd
-  targets:
-  - name: longhorn
-    clusterSelector:
-      matchLabels:
-        longhorn: enabled
 ---
 apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
@@ -24,22 +9,8 @@ spec:
   branch: main
   paths:
     - /fleet/longhorn
-  targets:
-  - name: longhorn
-    clusterSelector:
-      matchLabels:
-        longhorn: enabled
----
-apiVersion: fleet.cattle.io/v1alpha1
-kind: GitRepo
-metadata:
-  name: longhorn-configs
-  namespace: fleet-local
-spec:
-  repo: https://github.com/nnewc/fleet
-  branch: main
-  paths:
-    - /fleet/longhorn-configs
+    - /fleet/longhorn/crd
+    - /fleet/longhorn/config
   targets:
   - name: longhorn
     clusterSelector:
