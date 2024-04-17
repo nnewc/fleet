@@ -7,3 +7,14 @@ helm:
   version: "1.14"
   valuesFiles:
     - harbor-values.yaml
+
+targetCustomizations:
+  - name: local
+    clusterName: local
+    helm:
+      values:
+        persistence:
+          enabled: true
+          persistentVolumeClaim:
+            registry:
+              size: 100Gi 

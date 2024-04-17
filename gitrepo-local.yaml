@@ -8,8 +8,8 @@ spec:
   repo: https://github.com/nnewc/fleet
   branch: main
   paths:
-    - /fleet/longhorn
     - /fleet/longhorn/crd
+    - /fleet/longhorn
     - /fleet/longhorn/config
   targets:
   - name: longhorn
@@ -26,8 +26,8 @@ spec:
   repo: https://github.com/nnewc/fleet
   branch: main
   paths:
-    - /fleet/neuvector
     - /fleet/neuvector/crd
+    - /fleet/neuvector
     - /fleet/neuvector/config
   targets:
   - name: neuvector
