@@ -1,0 +1,9 @@
+defaultNamespace: nexus
+
+helm:
+  releaseName: nexus
+  repo: https://stevehipwell.github.io/helm-charts/
+  chart: nexus3
+  version: 4.42.1
+  valuesFiles:
+    - nexus-values.yaml

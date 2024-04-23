@@ -117,3 +117,19 @@ spec:
     clusterSelector:
       matchLabels:
         keycloak: enabled
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: nexus
+  namespace: fleet-local
+spec:
+  repo: https://github.com/nnewc/fleet
+  branch: main
+  paths:
+    - /fleet/nexus
+  targets:
+  - name: nexus
+    clusterSelector:
+      matchLabels:
+        nexus: enabled

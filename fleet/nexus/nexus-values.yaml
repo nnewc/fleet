@@ -1,0 +1,15 @@
+ingress:
+  enabled: true
+  hosts:
+  - nexus.10.7.2.230.nip.io
+  # annotations: 
+  #   cert-manager.io/issuer: selfsigned-issuer
+  # tls:
+  # - hosts:
+  #   - nexus.10.7.2.230.nip.io
+  #   secretName: nexus-ingress
+persistence:
+  enabled: true
+  storageClass: longhorn
+rootPassword:
+  secret: admin-creds
