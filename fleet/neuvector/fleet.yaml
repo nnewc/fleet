@@ -30,8 +30,8 @@ targetCustomizations:
               ingress:
                 enabled: true
                 host: neuvector-fed-master.10.7.2.230.nip.io
-  - name: neuvector-federated
-    clusterName: neuvector-federated
+  - name: neuvector-fed
+    clusterName: neuvector-fed
     helm:
       values:
         manager: 
