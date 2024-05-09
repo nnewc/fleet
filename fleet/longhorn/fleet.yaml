@@ -10,3 +10,15 @@ helm:
 
 dependsOn:
   - name: longhorn-fleet-longhorn-crd
+
+targetCustomizations:
+- name: neuvector-federated
+  clusterName: neuvector-federated
+  helm:
+    values:
+      ingress:
+        enabled: true
+        host: longhorn.10.7.2.143.nip.io
+        tls:
+          enabled: true
+          secretName: longhor-tls-ingress
