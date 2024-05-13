@@ -2,14 +2,11 @@ defaultNamespace: longhorn-system
 
 helm:
   releaseName: longhorn
-  repo: https://charts.rancher.io
+  repo: https://charts.longhorn.io
   chart: longhorn
-  version: 103.2.2+up1.5.4
+  version: "1.5"
   valuesFiles:
     - longhorn-values.yaml
-
-dependsOn:
-  - name: longhorn-fleet-longhorn-crd
 
 targetCustomizations:
 - name: neuvector-fed

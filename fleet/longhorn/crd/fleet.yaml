@@ -2,9 +2,9 @@ defaultNamespace: longhorn-system
 
 helm:
   releaseName: longhorn-crd
-  repo: https://charts.rancher.io
+  repo: https://charts.longhorn.io
   chart: longhorn-crd
-  version: 103.2.1+up1.5.3
+  version: "1.5"
   valuesFiles:
     - longhorn-crd-values.yaml
 
