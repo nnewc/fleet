@@ -19,3 +19,27 @@ targetCustomizations:
         tls:
           enabled: true
           secretName: longhor-tls-ingress
+
+diff:
+  comparePatches:
+    - apiVersion: apiextensions.k8s.io/v1
+      kind: CustomResourceDefinition
+      name: engineimages.longhorn.io
+      jsonPointers:
+        - /status/acceptedNames
+        - /status/conditions
+        - /status/storedVersions
+    - apiVersion: apiextensions.k8s.io/v1
+      kind: CustomResourceDefinition
+      name: nodes.longhorn.io
+      jsonPointers:
+        - /status/acceptedNames
+        - /status/conditions
+        - /status/storedVersions
+    - apiVersion: apiextensions.k8s.io/v1
+      kind: CustomResourceDefinition
+      name: volumes.longhorn.io
+      jsonPointers:
+        - /status/acceptedNames
+        - /status/conditions
+        - /status/storedVersions
