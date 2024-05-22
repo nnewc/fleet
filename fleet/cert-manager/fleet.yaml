@@ -4,6 +4,6 @@ helm:
   releaseName: cert-manager
   repo: https://charts.jetstack.io 
   chart: cert-manager
-  version: "1.13.0"
+  version: "1.13.1"
   valuesFiles:
     - cert-manager-values.yaml
