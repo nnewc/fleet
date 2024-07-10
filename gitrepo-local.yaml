@@ -128,8 +128,25 @@ spec:
   branch: main
   paths:
     - /fleet/nexus
+    - /fleet/nexus/config
   targets:
   - name: nexus
     clusterSelector:
       matchLabels:
         nexus: enabled
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: minio
+  namespace: fleet-local
+spec:
+  repo: https://github.com/nnewc/fleet
+  branch: main
+  paths:
+    - /fleet/minio
+  targets:
+  - name: minio
+    clusterSelector:
+      matchLabels:
+        minio: enabled

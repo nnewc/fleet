@@ -1,0 +1,12 @@
+ingress:
+  enabled: true
+apiIngress.enabled: true
+rootUser: admin
+rootPassword: password
+replicas: 2
+resources:
+  requests:
+    memory: 512Mi  
+persistence:
+  size: 10Gi
+  storageClass: longhorn

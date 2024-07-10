@@ -1,0 +1,32 @@
+defaultNamespace: minio
+helm:
+  releaseName: minio
+  chart: minio
+  repo: https://charts.min.io/
+  valuesFiles:
+    - minio-values.yaml
+targetCustomizations:
+- name: local
+  clusterName: local
+  helm:
+    values:
+      ingress:
+        enabled: true
+        annotations:
+          cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
+        hosts: 
+        - s3.10.7.2.230.nip.io
+        tls:
+        - secretName: s3-tls-ingress
+          hosts:
+          - s3.10.7.2.230.nip.io
+      consoleIngress:
+        enabled: true
+        annotations:
+          cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
+        hosts: 
+        - minio.10.7.2.230.nip.io
+        tls:
+        - secretName: minio-tls-ingress
+          hosts:
+          - minio.10.7.2.230.nip.io
