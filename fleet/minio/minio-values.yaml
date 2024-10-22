@@ -9,4 +9,4 @@ resources:
     memory: 512Mi  
 persistence:
   size: 10Gi
-  storageClass: longhorn
+  storageClass: harvester-longhorn
