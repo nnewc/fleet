@@ -11,9 +11,9 @@ controller:
     enabled: true
   replicas: 1
   disruptionBudget: 2
-  pvc:
-    enabled: true
-    storageClass: harvester
+  # pvc:
+  #   enabled: true
+  #   storageClass: harvester
   ranchersso:
     enabled: true
   runAsUser: 1000
