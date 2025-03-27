@@ -1,0 +1,9 @@
+defaultNamespace: vault
+
+helm:
+  releaseName: vault
+  repo: https://helm.releases.hashicorp.com
+  chart: vault
+  version: 103.0.0+up45.31.1
+  valuesFiles:
+    - vault-values.yaml

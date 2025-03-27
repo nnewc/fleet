@@ -10,10 +10,10 @@ expose:
       nginx.ingress.kubernetes.io/ssl-redirect: 'true'
       cert-manager.io/issuer: selfsigned-issuer
     hosts: 
-      core: harbor.10.7.2.230.nip.io
+      core: harbor.192-168-60-101.nip.io
   tls:
     certSource: secret
     enabled: true
     secret:
       secretName: tls-ingress-harbor
-externalURL: https://harbor.10.7.2.230.nip.io      
+externalURL: https://harbor.192-168-60-101.nip.io      

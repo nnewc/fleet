@@ -18,7 +18,7 @@ targetCustomizations:
     values:
       ingress:
         enabled: true
-        host: longhorn.10.7.2.146.nip.io
+        host: longhorn.192-168-61-41.nip.io
         tls:
           enabled: true
           secretName: longhor-tls-ingress

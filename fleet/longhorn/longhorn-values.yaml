@@ -1,6 +1,6 @@
 ingress:
   enabled: true
-  host: longhorn.10.7.2.230.nip.io
+  host: longhorn.192-168-60-101.nip.io
   tls:
     enabled: true
     secretName: longhor-tls-ingress
